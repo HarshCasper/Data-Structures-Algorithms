@@ -1,21 +1,22 @@
-// Python Program to print Unique Prime Factors of a Number
+# Python Program to print Unique Prime Factors of a Number
 
-import math
-def prime_factors(n):
-    list=[]
-    while n%2==0:
-        list.append(2)
-        n=n//2
-    for i in range(3,int(math.sqrt(n)),2):
-        while n%i==0:
-            list.append(i)
-            n=n/i
-    if n>2:
-        list.append(n)
+Number = int(input(" Please Enter any Number: "))
+i = 1
+my=[]
 
-    return list
+while(i <= Number):
+    count = 0
+    if(Number % i == 0):
+        j = 1
+        while(j <= i):
+            if(i % j == 0):
+                count = count + 1
+            j = j + 1
+            
+        if (count == 2):
+            my.append(i)
+    i = i + 1
 
-n=int(input("Enter the number whose unique prime numbers are to be printed: "))
-my=prime_factors(n)
 my=list(dict.fromkeys(my))
 print(my)
+
