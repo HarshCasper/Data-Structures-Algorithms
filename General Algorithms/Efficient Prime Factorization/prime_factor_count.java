@@ -8,7 +8,7 @@ public class prime_factor_array{
             flag++;
             n=n/2;
         }
-        for(int i=3;i<Math.sqrt(n);i=i+2){
+        for(int i=3;i<=Math.sqrt(n);i=i+2){
             while(n%i==0){
                 flag++;
                 n=n/i;
