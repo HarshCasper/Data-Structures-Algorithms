@@ -9,6 +9,10 @@ public class Main{
     int end=arr.length-1;
     while(start<=end){
       int mid=(start+end)/2;
+      /* While checking if the mid element is the desired element, ensure that mid+1 
+      (if it exists) is greater than desired element. This will give us last index of
+      the desired element.
+      */
       if((arr[mid]==num) && ((mid==end) || (arr[mid+1]>num))){
         return mid;
       }
