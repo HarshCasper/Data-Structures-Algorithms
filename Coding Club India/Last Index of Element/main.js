@@ -1,3 +1,4 @@
+// Non-Recursive Approach
 function lastIndexElement(arr,number){
   return arr.lastIndexOf(number);
 }
