@@ -1,0 +1,15 @@
+l= []
+found=False
+n=int(input("enter the number of elements"))
+print("enter elements in the list")
+for i in range(n):
+    l.append(int(input()))
+print("the given list is",l)
+k=int(input("enter the number to be searched"))
+for j in range(n):
+    if(k==l[j]):
+        print("element found at position",j)
+        found=True
+if found==False:
+    print("element not found")
+
